@@ -1,209 +1,902 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sneha Sharma — Portfolio">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0b'/%3E%3Ctext x='50' y='64' font-family='Georgia,serif' font-size='46' fill='%23c9b48a' text-anchor='middle'%3ESS%3C/text%3E%3C/svg%3E">
+<title>Sneha Sharma — Data & AI Engineering Portfolio</title>
 
-<html>
-	<head>
-		<title>Sneha Sharma</title>
-		<link rel="icon" href="images/title.png" type="image/png">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --fg: #ece9e2;
+    --fg-55: rgba(236,233,226,.55);
+    --fg-35: rgba(236,233,226,.35);
+    --fg-22: rgba(236,233,226,.22);
+    --fg-12: rgba(236,233,226,.12);
 
+    --gold: #c9b48a;
+    --gold-dim: rgba(201,180,138,.35);
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    --serif: 'Iowan Old Style', Palatino, Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1>Sneha Sharma</h1>
-						<p>Data Analyst | Student at NIT Jamshedpur<br />
-						Passionate about building impactful data projects using Python, Streamlit, and more.</p>
-					</header>
+    --ease: cubic-bezier(.22,1,.36,1);
+  }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#about_me" class="active">About Me</a></li>
-							<li><a href="#tools">Skills</a></li>
-							<li><a href="#projects">Projects</a></li>
-							<li><a href="#experience">Certifications</a></li>
-						</ul>
-					</nav>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
 
-				<!-- Main -->
-					<div id="main">
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image: radial-gradient(circle at 50% 32%, rgba(255,255,255,.035), transparent 55%);
+    color: var(--fg);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
 
-						<!-- About Me -->
-							<section id="about_me" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>About Me</h2>
-										</header>
-										<p>I am a B.Tech student at NIT Jamshedpur with a keen interest in data analysis and Python-based solutions. 
-											I enjoy working on data-driven projects and am currently looking for internship opportunities to gain hands-on experience.</p>
-											<ul>
-												<li><strong>Education:</strong> B.Tech (Engineering and Computational Mechanics) at NIT Jamshedpur(2024–2028)</li>
-												<li><strong>Current CGPA:</strong> 8.64 / 10</li>												
-												<li><strong>Field of Interest:</strong> Data Analysis, Machine Learning</li>
-												<li><strong>Skills:</strong> Python, Pandas, Streamlit, Matplotlib</li>
-												<li><strong>Goal:</strong> Seeking data-focused internships to apply and grow my skills</li>
-											  </ul>
-										<ul class="actions">
-											<li><a href="#footer" class="button">Contact Me</a></li>
-										</ul>
-									</div>
-									<span class="image"><img src="images/Sneha.jpeg" alt="" /></span>
-								</div>
-							</section>
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--gold-dim); color: var(--fg); }
 
-						<!-- Tools & Skills -->
-							<section id="tools" class="main special">
-								<header class="major">
-									<h2>Skills</h2>
-								</header>
-								<section id="tools-section">
-									<div class="tools-container">
+  a:focus-visible,
+  button:focus-visible {
+    outline: 1px solid var(--gold);
+    outline-offset: 3px;
+  }
 
-										<div class="tools-grid">
-										<div class="tool"><img src="images/icons/python logo.png" alt="Python"><span>Python</span></div>
-										<div class="tool"><img src="images/icons/SQL logo.png" alt="SQL"><span>SQL</span></div>
-										<div class="tool"><img src="images/icons/Tableau logo.png" alt="Tableau"><span>Tableau</span></div>
-										<div class="tool"><img src="images/icons/git_logo.png" alt="Git"><span>Git</span></div>
-										<div class="tool"><img src="images/icons/streamlit logo.png" alt="Streamlit"><span>Streamlit</span></div>
-										<div class="tool"><img src="images/icons/excel logo.png" alt="Excel"><span>Excel</span></div>
-										<div class="tool"><img src="images/icons/pandas logo.png" alt="Pandas"><span>Pandas</span></div>
-										<div class="tool"><img src="images/icons/matplotlib logo.png" alt="Matplotlib"><span>Matplotlib</span></div>
-										<div class="tool"><img src="images/icons/jupyter logo.png" alt="Jupyter Notebook"><span>Jupyter Notebook</span></div>
-										</div>
+  .shell { max-width: 1440px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); }
 
-										<div class="resume-box">
-											<h3>My Resume</h3>
-											<iframe src="resume/2025-06 Resume.pdf" type="application/pdf" class="resume-preview" title="Resume Preview"></iframe>
-											<a href="resume/2025-06 Resume.pdf" class="button" download>Download</a>
-										</div>
+  section, footer { scroll-margin-top: 84px; }
 
-									</div>
-								</section>
-								
-								<footer class="major"></footer>
+  /* ============ NAVIGATION ============ */
+  header.nav {
+    position: sticky; top: 0; z-index: 30;
+    background: rgba(10,10,11,.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--fg-12);
+  }
+  .nav-row { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+  .brand { font-family: var(--serif); text-transform: uppercase; letter-spacing: .4em; font-size: .78rem; }
+  .brand span { color: var(--gold); }
+  nav.links { display: flex; gap: 28px; }
+  nav.links a {
+    position: relative; font-size: .64rem; text-transform: uppercase; letter-spacing: .22em;
+    color: var(--fg-55); padding-bottom: 6px; transition: color .4s var(--ease);
+  }
+  nav.links a::after {
+    content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+    background: var(--gold); transform: scaleX(0); transform-origin: left;
+    transition: transform .45s var(--ease);
+  }
+  nav.links a:hover { color: var(--fg); }
+  nav.links a:hover::after { transform: scaleX(1); }
+  .nav-meta { display: none; font-size: .6rem; text-transform: uppercase; letter-spacing: .2em; color: var(--fg-55); }
+  @media(min-width:1100px) { .nav-meta { display: block; } }
 
-							</section>
+  /* mobile nav toggle */
+  .nav-toggle {
+    display: none; width: 34px; height: 34px; border: 1px solid var(--fg-22);
+    background: transparent; cursor: pointer; align-items: center; justify-content: center;
+    flex-direction: column; gap: 5px; padding: 0;
+  }
+  .nav-toggle span { display: block; width: 16px; height: 1px; background: var(--fg); transition: transform .3s var(--ease), opacity .3s var(--ease); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-						<!-- Projects -->
-							<section id="projects" class="main special">
-								<header class="major">
-									<h2>Projects</h2>
-								</header>
-								<section class="cards special">
-									<article class="card">
-										<img src="images/Agnos.png" alt="Website Preview" class="card-image"/>										
-										<h3>Agnos AI</h3>
-										<p>Automated real-time facial recognition and secure attendance logging system built with Streamlit, OpenCV and Keras.</p>
-										<a href="https://agnos-ai.streamlit.app/" target="_blank" class="button">View Project</a>
-									</article>
+  @media(max-width:760px) {
+    nav.links {
+      display: flex; position: absolute; top: 76px; left: 0; right: 0;
+      flex-direction: column; gap: 0;
+      background: rgba(10,10,11,.98); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--fg-12);
+      max-height: 0; overflow: hidden;
+      transition: max-height .45s var(--ease);
+    }
+    nav.links.is-open { max-height: 400px; }
+    nav.links a { padding: 16px clamp(20px,5vw,72px); border-top: 1px solid var(--fg-12); }
+    nav.links a::after { display: none; }
+    .nav-toggle { display: flex; }
+  }
 
-									<article class="card">
-										<img src="images/resume_score.png" alt="Website Preview" class="card-image"/>										
-										<h3>Padh.AI</h3>
-										<p>A RAG-based educational platform that ingests course materials to provide students with automated PYQ solutions, topic insights, and an interactive AI chatbot.</p>
-										<a href="https://agnosai.streamlit.app/" target="_blank" class="button">View Project</a>
-									</article>
-									
-									<article class="card">
-										<img src="images/retention_graphs.png" alt="Graphs" class="card-image" />
-										<h3>Customer Experience Analysis</h3>
-										<p>End-to-End EDA using Python (Pandas, Matplotlib) and SQL to uncover customer behavior patterns, and churn trends. </p>
-										<a href="https://github.com/TheSnehaSharma/Customer_Experience_SQL_Analysis" target="_blank" class="button">View Project</a>
-									</article>
+  /* ============ GENERAL SECTIONS ============ */
+  section { padding: clamp(64px, 10vw, 96px) 0; }
+  .eyebrow { margin: 0 0 18px; font-size: .62rem; text-transform: uppercase; letter-spacing: .3em; color: var(--gold); }
+  .section-title { margin: 0 0 clamp(32px, 6vw, 48px); font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; color: var(--fg); }
+  hr.hair { border: none; border-top: 1px solid var(--fg-12); margin: 0; }
 
-									<article class="card">
-										<img src="images/resume_score.png" alt="Website Preview" class="card-image"/>										
-										<h3>Resume Compatibility Scorer</h3>
-										<p>A Streamlit web app to evaluate resume-job description compatibility and provide score and insights using Gemini API.</p>
-										<a href="https://cvscore.streamlit.app/" target="_blank" class="button">View Project</a>
-									</article>
+  /* ============ HERO / ABOUT ============ */
+.hero { display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; padding-top: clamp(48px, 8vw, 80px); }
+@media(min-width:960px) { .hero { grid-template-columns: 340px 1fr; gap: 96px; } }
 
-									<article class="card">
-										<img src="images/Netflix.png" alt="Website Preview" class="card-image"/>		
-										<h3>Netflix Analysis Dashboard</h3>
-										<p>An interactive insight-based dashboard using Tableau to present data-driven findings based on Netflix User Data.</p>
-										<a href="https://public.tableau.com/app/profile/sneha.sharma6605/viz/Netflix_17371872846430/Netflix" target="_blank" class="button">View Project</a>
-									</article>
-								</section>
-								<footer class="major"></footer>
-							</section>
+.portrait-wrap { 
+  position: relative; 
+  width: min(280px, 68vw); 
+  aspect-ratio: 1 / 1; 
+  margin: 0 auto; 
+  border-radius: 50%;
+  animation: float 18s ease-in-out infinite; 
+  transition: box-shadow 0.8s ease; 
+}
 
-						<!-- Certifications -->
-							<section id="experience" class="main special">
-								<header class="major">
-									<h2>Certifications</h2>
-								</header>
-									<section class="feature-row">
-										<div class="feature-content">
-											<a href="https://www.coursera.org/account/accomplishments/professional-cert/31QA1NU3XZ32" target="_blank">
-											<img src="images/Google Data Analytics Certificate.png" alt="Google Advanced Data Analytics" />
-											</a>
-											<div class="text">
-											<h3>Google Advanced Data Analytics</h3>
-											<p>Completed Google’s Advanced Data Analytics Certificate, gaining hands-on experience in statistics, machine learning, Python, and data visualization tools.</p>
-											</div>
-										</div>
+.portrait-wrap:hover {
+  box-shadow: 0 0 50px 15px rgba(201, 180, 138, 0.4); 
+}
 
-										<div class="feature-content reverse">
-											<a href="https://www.credly.com/badges/9f9504bd-ab3b-457e-8464-6c488f6a5bc8/print" target="_blank">
-											<img src="images/Github Foundations Badge.png" alt="Github Foundations" />
-											</a>
-											<div class="text">
-											<h3>Github Foundations</h3>
-											<p>Earned the GitHub Foundations Badge by demonstrating core proficiency in version control, repositories, commits, and collaboration using GitHub.</p>
-											</div>
-										</div>
+@keyframes float { 
+  0%, 100% { transform: translateY(0); } 
+  50% { transform: translateY(-16px); } 
+}
 
-										<div class="feature-content">
-											<a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_DBY24wfSzx77hkGnW_1749186590566_completion_certificate.pdf" target="_blank">
-											<img src="images/Delloite Virtual Internship.png" alt="Delloite Internship" />
-											</a>
-											<div class="text">
-											<h3>Delloite Data Analyst Job Simulation</h3>
-											<p>Created data-driven Dashboards using Tableau and utilized Excel to classify raw data to draw business conclusions & find optimized solutions for increasing process efficiencies</p>
-										</div>
-										</div>
-										</section>
-								<footer class="major"></footer>
-							</section>
+.portrait-wrap img { 
+  width: 100%; 
+  height: 100%; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  display: block; 
+  filter: contrast(1.04); 
+}
 
-					</div>
+.portrait-caption { text-align: center; margin-top: 18px; font-size: 1rem; text-transform: uppercase; letter-spacing: .26em; color: var(--fg-55); }
 
-				<!-- Footer -->
-					<footer id="footer">
-							<h2>Contact Me</h2>
-							<p>Feel Free to Reach Out</p>
-							<ul class="icons">
-								<li><a href="https://www.linkedin.com/in/devsnehasharma/" target="_blank" class="icon brands fa-linkedin alt"><span class="label">LinkedIn</span></a></li>
-								<li><a href="https://github.com/TheSnehaSharma/" target="_blank" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="https://leetcode.com/u/thesnehasharma/" target="_blank" class="icon solid fa-code alt"><span class="label">Leetcode</span></a></li>
-								<li><a href="mailto:devsnehasharma@gmail.com.com" target="_blank" class="icon brands fa-google alt"><span class="label">Email</span></a></li>
-							</ul>
-						<p class="copyright">&copy;Sneha Sharma</p>
-					</footer>
-			</div>
+.hero-copy h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(2.2rem, 6vw, 4rem); margin: 0 0 12px; line-height: 1.08; }
+.hero-sub { margin: 0 0 26px; font-size: .64rem; text-transform: uppercase; letter-spacing: .22em; color: var(--fg-55); }
+.hero-sub span { color: var(--gold); }
+.lede { max-width: 60ch; margin: 0 0 30px; font-family: var(--serif); font-size: clamp(1rem, 2.4vw, 1.12rem); line-height: 1.7; }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+.hero-links { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+.pill {
+  position: relative; overflow: hidden; z-index: 0;
+  border: 1px solid var(--fg-22); padding: 11px 20px;
+  font-size: .64rem; text-transform: uppercase; letter-spacing: .22em;
+  color: var(--fg-55);
+  transition: border-color .5s var(--ease), color .5s var(--ease);
+}
+.pill::before {
+  content: ""; position: absolute; inset: 0; background: var(--fg);
+  transform: scaleX(0); transform-origin: left; z-index: -1;
+  transition: transform .5s var(--ease);
+}
+.pill:hover, .pill:focus-visible { border-color: var(--fg); color: #0a0a0b; }
+.pill:hover::before, .pill:focus-visible::before { transform: scaleX(1); }
 
-	</body>
+.hero-contact { display: flex; gap: 16px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+.hero-contact a {
+  display: flex; width: 36px; height: 36px; align-items: center; justify-content: center;
+  border: 1px solid var(--fg-22); color: var(--gold); transition: border-color .35s var(--ease), transform .35s var(--ease);
+}
+.hero-contact a:hover { border-color: var(--gold); transform: translateY(-3px); }
+.hero-contact svg { width: 17px; height: 17px; fill: currentColor; }
+
+/* ============ SKILLS ============ */
+  .skills-intro { max-width: 62ch; color: var(--fg-55); font-size: .95rem; line-height: 1.7; margin-top: -24px; margin-bottom: 46px; }
+  
+  .skills-domains { 
+    display: grid; 
+    grid-template-columns: 1fr; 
+  }
+  
+  .skill-domain {
+    position: relative; 
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 30px 20px;
+    border: 1px solid transparent; 
+    border-top-color: var(--fg-12);
+    border-radius: 0; 
+    background: transparent;
+    transition: transform .4s var(--ease), box-shadow .4s var(--ease), background .4s var(--ease);
+  }
+  
+  .skill-domain:last-child { 
+    border-bottom-color: var(--fg-12); 
+  }
+  
+  @media(min-width:860px) { 
+    .skill-domain { grid-template-columns: 230px minmax(0,1fr); gap: 40px; padding: 40px 20px; } 
+  }
+  
+  .skill-domain:hover { 
+    transform: translateY(-6px); 
+    z-index: 10;
+    box-shadow: 0 12px 30px -10px rgba(201, 180, 138, 0.15); 
+    background: #0a0a0b;
+  }
+
+  .skill-domain::before,
+  .skill-domain::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 12;
+  }
+
+  .skill-domain::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    transition: height 0.15s linear 0.3s, width 0.15s linear 0.45s, border-color 0s linear 0.6s;
+  }
+
+  .skill-domain::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    transition: height 0.15s linear 0s, width 0.15s linear 0.15s, border-color 0s linear 0.3s;
+  }
+
+  .skill-domain:hover::before {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-top-color: var(--gold);
+    border-right-color: var(--gold);
+    transition: border-color 0s linear 0s, width 0.15s linear 0s, height 0.15s linear 0.15s;
+  }
+
+  .skill-domain:hover::after {
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    border-bottom-color: var(--gold);
+    border-left-color: var(--gold);
+    transition: border-color 0s linear 0.3s, width 0.15s linear 0.3s, height 0.15s linear 0.45s;
+  }
+
+  .skill-index { font-family: var(--serif); color: var(--gold); font-size: .95rem; display: block; margin-bottom: 8px; }
+  .skill-domain h3 { font-family: var(--serif); font-size: 1.25rem; font-weight: 400; margin: 0 0 8px; }
+  .skill-domain p { color: var(--fg-55); font-size: .82rem; line-height: 1.6; margin: 0; }
+
+  .skill-cluster { display: flex; flex-wrap: wrap; gap: 12px 14px; align-content: flex-start; }
+  
+  .skill-item {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+    min-width: 80px; padding: 12px 10px;
+    border: 1px solid var(--fg-12);
+    border-radius: 0; 
+    font-size: .78rem; color: var(--fg-55); letter-spacing: .01em; text-align: center;
+    transition: border-color .35s var(--ease), color .35s var(--ease), transform .35s var(--ease);
+  }
+  
+  .skill-item:hover { border-color: var(--gold); color: var(--fg); transform: translateY(-2px); }
+  .skill-item img { width: 18px; height: 18px; object-fit: contain; flex: none; }
+  .skill-icon-custom { width: 18px; height: 18px; flex: none; display: flex; }
+  .skill-icon-custom svg { width: 100%; height: 100%; }
+
+  /* ============ PROJECTS ============ */
+  .projects { display: grid; }
+  .project {
+    position: relative; display: grid; grid-template-columns: 1fr; gap: 18px;
+    padding: 34px 0 34px 20px; border-top: 1px solid var(--fg-12);
+    transition: border-color .4s var(--ease);
+  }
+  .project::before {
+    content: ""; position: absolute; left: 0; top: 34px; bottom: 34px; width: 1px;
+    background: var(--gold); transform: scaleY(0); transform-origin: top;
+    transition: transform .5s var(--ease);
+  }
+  .project:hover::before, .project:focus-within::before { transform: scaleY(1); }
+  .project:last-child { border-bottom: 1px solid var(--fg-12); }
+  @media(min-width:760px) { .project { grid-template-columns: 80px 1fr auto; gap: 32px; } }
+  .index { font-family: var(--serif); color: var(--gold); font-size: .95rem; }
+  .project h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 400; margin: 0 0 10px; }
+  .project p { max-width: 65ch; margin: 0 0 16px; font-size: .9rem; line-height: 1.65; color: var(--fg-55); }
+  .stack { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+  .stack span { font-size: .58rem; text-transform: uppercase; letter-spacing: .18em; color: var(--fg-55); }
+  .project-links { display: flex; flex-direction: row; gap: 18px; flex-wrap: wrap; }
+  @media(min-width:760px) { .project-links { flex-direction: column; align-items: flex-end; gap: 14px; white-space: nowrap; } }
+  .project-link {
+    font-size: .62rem; text-transform: uppercase; letter-spacing: .2em; color: var(--fg-55);
+    border-bottom: 1px solid var(--fg-22); padding-bottom: 4px; transition: color .35s var(--ease), border-color .35s var(--ease);
+  }
+  .project-link:hover, .project-link:focus-visible { color: var(--gold); border-color: var(--gold); }
+
+  /* ============ CERTIFICATIONS ============ */
+.certs { display: grid; }
+  
+  .cert {
+    position: relative; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center;
+    padding: 26px 0 26px 20px; border-top: 1px solid var(--fg-12);
+  }
+  
+  .cert:last-child { border-bottom: 1px solid var(--fg-12); }
+
+  .cert > div:first-child {
+    display: flex;
+    flex-direction: column-reverse; 
+    gap: 6px;
+  }
+  
+  .cert-issuer { 
+    font-size: .62rem; text-transform: uppercase; letter-spacing: .2em; 
+    color: var(--gold); 
+    margin: 0;
+  }
+
+  .cert-name { 
+    font-family: var(--serif); font-size: 1.25rem; 
+    color: var(--fg); 
+    margin: 0;
+    position: relative;
+    width: fit-content;
+    transition: transform .5s var(--ease);
+  }
+
+  .cert:hover .cert-name { 
+    transform: translateX(12px); 
+  }
+
+  .cert-name::after {
+    content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px;
+    background: var(--gold); 
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .5s var(--ease);
+  }
+  
+  .cert:hover .cert-name::after { 
+    transform: scaleX(1); 
+  }
+
+  .cert-link {
+    text-align: right; font-size: .62rem; text-transform: uppercase; letter-spacing: .2em; color: var(--fg-55);
+    border-bottom: 1px solid var(--fg-22); padding-bottom: 4px; white-space: nowrap;
+    transition: color .35s var(--ease), border-color .35s var(--ease);
+  }
+  
+  .cert-link:hover, .cert-link:focus-visible { 
+    color: var(--gold); border-color: var(--gold); 
+  }
+  
+  @media(max-width:600px) { 
+    .cert { grid-template-columns: 1fr; gap: 14px; } 
+    .cert-link { text-align: left; width: fit-content; } 
+  }
+
+  /* ============ EXPERIENCE ============ */
+  .experience-list { display: grid; }
+  .exp-item {
+    position: relative; display: grid; grid-template-columns: 1fr; gap: 18px;
+    padding: 34px 0 34px 20px; border-top: 1px solid var(--fg-12);
+    transition: border-color .4s var(--ease);
+  }
+  .exp-item::before {
+    content: ""; position: absolute; left: 0; top: 34px; bottom: 34px; width: 1px;
+    background: var(--gold); transform: scaleY(0); transform-origin: top;
+    transition: transform .5s var(--ease);
+  }
+  .exp-item:hover::before, .exp-item:focus-within::before { transform: scaleY(1); }
+  .exp-item:last-child { border-bottom: 1px solid var(--fg-12); }
+  @media(min-width:760px) { .exp-item { grid-template-columns: 160px 1fr auto; gap: 32px; } }
+  .exp-dates { font-size: .62rem; text-transform: uppercase; letter-spacing: .2em; color: var(--gold); padding-top: 6px; }
+  .exp-item h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; margin: 0 0 7px; }
+  .exp-role { display: block; margin-bottom: 16px; font-size: .68rem; text-transform: uppercase; letter-spacing: .18em; color: var(--fg-55); }
+  .exp-item ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+  .exp-item li { color: var(--fg-55); font-size: .9rem; line-height: 1.65; }
+  .exp-item li::marker { color: var(--gold); }
+  .exp-link {
+    font-size: .62rem; text-transform: uppercase; letter-spacing: .2em; color: var(--fg-55);
+    border-bottom: 1px solid var(--fg-22); padding-bottom: 4px; white-space: nowrap; height: fit-content;
+    transition: color .35s var(--ease), border-color .35s var(--ease);
+  }
+  .exp-link:hover, .exp-link:focus-visible { color: var(--gold); border-color: var(--gold); }
+
+  /* ============ FOOTER ============ */
+  footer { border-top: 1px solid var(--fg-12); padding: 56px 0 40px; }
+  .foot-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+  .foot-brand { font-family: var(--serif); text-transform: uppercase; letter-spacing: .38em; font-size: .88rem; color: var(--gold); }
+  .foot-clock { margin-top: 12px; font-size: .75rem; letter-spacing: .12em; color: var(--fg-55); font-variant-numeric: tabular-nums; }
+  .foot-location { margin-top: 6px; font-size: .62rem; text-transform: uppercase; letter-spacing: .2em; color: var(--fg-55); }
+  .foot-links { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; }
+  .foot-links a { display: flex; align-items: center; gap: 10px; font-size: .72rem; color: var(--fg-55); transition: color .3s var(--ease); }
+  .foot-links a:hover, .foot-links a:focus-visible { color: var(--gold); }
+  .foot-links svg { width: 16px; height: 16px; fill: currentColor; }
+  .foot-copy { margin-top: 42px; padding-top: 20px; border-top: 1px solid var(--fg-12); font-size: .58rem; text-transform: uppercase; letter-spacing: .18em; color: var(--fg-22); }
+  @media(max-width:650px) { .foot-row { flex-direction: column; gap: 32px; } .foot-links { align-items: flex-start; } }
+
+  /* ============ SITE-WIDE SCROLL REVEAL ============ */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  @media(prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .portrait-wrap, .portrait-ring { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="nav">
+  <div class="shell nav-row">
+    <div class="brand"><span>Sneha Sharma</span></div>
+
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Projects</a>
+      <a href="#credentials">Certificates</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-meta">Data & AI/ML Engineer</div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="shell">
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="hero">
+  <div>
+    <div class="portrait-wrap">
+      <img src="https://avatars.githubusercontent.com/u/173901062?v=4" alt="Sneha Sharma" width="280" height="280">
+    </div>
+    <p class="portrait-caption">Sneha Sharma</p>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow">Portfolio</p>
+    <h1>Data & AI/ML<br>Engineering</h1>
+    <p class="hero-sub">Data Engineering <span>·</span> Machine Learning <span>·</span> Artificial Intelligence</p>
+    <p class="lede">
+      I am a Data and AI/ML engineering enthusiast focused on
+      building reliable data pipelines, machine learning systems,
+      and intelligent applications. I enjoy transforming raw data
+      into scalable solutions through analytics, automation,
+      machine learning, and modern AI technologies.
+    </p>
+
+    <div class="hero-links">
+      <a class="pill" href="#work">See Work</a>
+      <a class="pill" href="https://drive.google.com/drive/folders/1tm2ff8tnlp9-uWO5emVSz-OYImYBHNre?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a class="pill" href="#contact">Contact</a>
+    </div>
+
+    <div class="hero-contact">
+      <a href="https://www.linkedin.com/in/devsnehasharma/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.36 8.16h4.25V24H.36V8.16zM7.29 8.16h4.07v2.16h.06c.57-1.08 1.96-2.22 4.03-2.22 4.31 0 5.11 2.84 5.11 6.53V24h-4.24v-8.3c0-1.98-.04-4.53-2.76-4.53-2.77 0-3.19 2.16-3.19 4.39V24H6.12V8.16h1.17z"/></svg>
+      </a>
+      <a href="https://github.com/TheSnehaSharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.64 5.6.64 11.88c0 5.02 3.25 9.27 7.76 10.77.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.97-3.15.69-3.82-1.52-3.82-1.52-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.05-.12-.29-.51-1.44.11-3 0 0 .95-.31 3.12 1.16A10.8 10.8 0 0112 6.55c.97 0 1.95.13 2.86.39 2.18-1.47 3.12-1.16 3.12-1.16.62 1.56.23 2.71.11 3 .73.8 1.17 1.81 1.17 3.05 0 4.35-2.64 5.31-5.16 5.59.41.35.77 1.03.77 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.21.66.79.55 4.5-1.5 7.75-5.75 7.75-10.77C23.36 5.6 18.27.5 12 .5z"/></svg>
+      </a>
+      <a href="mailto:devsnehasharma@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20v16H2V4zm10 8L4 6v12h16V6l-8 6zm0 2L4 8v10h16V8l-8 6z"/></svg>
+      </a>
+      <a href="https://leetcode.com/thesnehasharma/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 3 5 11.5a3.5 3.5 0 000 5l4 4a3.5 3.5 0 005 0l2-2-2-2-2 2a1 1 0 01-1.4 0l-4-4a1 1 0 010-1.4l8.3-8.3L13.5 3zm2.5 7h-7v3h7v-3z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="hair">
+
+<!-- ============ SKILLS ============ -->
+<section id="skills">
+  <p class="eyebrow">Technical Toolkit</p>
+  <h2 class="section-title">Skills</h2>
+
+  <div class="skills-domains">
+
+    <!-- I. DATA ANALYTICS -->
+    <div class="skill-domain">
+      <div>
+        <span class="skill-index">I</span>
+        <h3>Data Analytics</h3>
+        <p>Querying, business intelligence, and the dashboards decisions get made from.</p>
+      </div>
+      <div class="skill-cluster">
+        <div class="skill-item">
+          <span class="skill-icon-custom" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="#4479A1"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+          </span>
+          <span>SQL</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Tableau</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Power BI</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Pandas</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>NumPy</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- II. DATA SCIENCE -->
+    <div class="skill-domain">
+      <div>
+        <span class="skill-index">II</span>
+        <h3>Data Science</h3>
+        <p>Modeling and building the applications that put a model in front of people.</p>
+      </div>
+      <div class="skill-cluster">
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Python</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Scikit-learn</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://streamlit.io/images/brand/streamlit-mark-color.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Streamlit</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Git_icon.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Git</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- III. DATA ENGINEERING -->
+    <div class="skill-domain">
+      <div>
+        <span class="skill-index">III</span>
+        <h3>Data Engineering</h3>
+        <p>Pipelines and platforms that keep running after the demo is over.</p>
+      </div>
+      <div class="skill-cluster">
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>PySpark</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://github.com/databricks.png" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Databricks</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Microsoft Fabric</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://avatars.githubusercontent.com/u/31818227?s=100&v=4" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Airflow</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://github.com/dbt-labs.png" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>dbt</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Docker</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- IV. AI / ML -->
+    <div class="skill-domain">
+      <div>
+        <span class="skill-index">IV</span>
+        <h3>AI / ML</h3>
+        <p>Model training, generative AI, and getting it all into production.</p>
+      </div>
+      <div class="skill-cluster">
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>TensorFlow</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Generative AI</span>
+        </div>
+        <div class="skill-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg" alt="" loading="lazy" decoding="async" width="18" height="18">
+          <span>Gemini API</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="hair">
+
+<!-- ============ PROJECTS ============ -->
+<section id="work">
+  <p class="eyebrow">Selected Work</p>
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects">
+
+    <div class="project">
+      <div class="index">01</div>
+      <div>
+        <h3>Padh.AI</h3>
+        <p>
+          A RAG-based educational platform designed to transform
+          university documents, PDFs, and past examination papers
+          into structured and AI-accessible knowledge. The platform
+          uses agentic retrieval and multimodal AI workflows to
+          support academic research and learning.
+        </p>
+        <div class="stack">
+          <span>Python</span><span>RAG</span><span>Gemini API</span><span>Node.js</span><span>AI Agents</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://youtu.be/NBdyghqJvww?si=pmaVtstktdqPDOwP" target="_blank" rel="noopener noreferrer">View Demo</a>
+        <a class="project-link" href="https://github.com/TheSnehaSharma/Padh.ai" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="index">02</div>
+      <div>
+        <h3>Agnos AI</h3>
+        <p>
+          A real-time biometric attendance system using facial
+          recognition, WebRTC, Streamlit, TensorFlow, and OpenCV.
+          The system processes live video streams and performs
+          automated attendance logging.
+        </p>
+        <div class="stack">
+          <span>Python</span><span>TensorFlow</span><span>OpenCV</span><span>Streamlit</span><span>WebRTC</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://agnos-ai.streamlit.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+        <a class="project-link" href="https://github.com/TheSnehaSharma/Agnos" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="index">03</div>
+      <div>
+        <h3>Customer Experience Analysis</h3>
+        <p>
+          End-to-end exploratory data analysis using Python and SQL
+          to identify customer behavior patterns, engagement trends,
+          and potential churn indicators.
+        </p>
+        <div class="stack">
+          <span>Python</span><span>SQL</span><span>Pandas</span><span>Matplotlib</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://colab.research.google.com/drive/19YlnkESRq_Q-XI7WQf-cP2HOsftQZXVo?usp=sharing" target="_blank" rel="noopener noreferrer">View Notebook</a>
+        <a class="project-link" href="https://github.com/TheSnehaSharma/Customer_Experience_SQL_Analysis" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="index">04</div>
+      <div>
+        <h3>Resume Compatibility Scorer</h3>
+        <p>
+          A Streamlit application that evaluates resume and job
+          description compatibility and generates intelligent
+          insights using the Gemini API.
+        </p>
+        <div class="stack">
+          <span>Python</span><span>Streamlit</span><span>Gemini API</span><span>NLP</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://cvscore.streamlit.app/" target="_blank" rel="noopener noreferrer">View Project</a>
+        <a class="project-link" href="https://github.com/TheSnehaSharma/Resume_Compatibility_Screening">GitHub Repo</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="index">05</div>
+      <div>
+        <h3>Netflix Analysis Dashboard</h3>
+        <p>
+          An interactive Tableau dashboard providing insight into
+          Netflix user data, viewing patterns, and content trends.
+        </p>
+        <div class="stack">
+          <span>Tableau</span><span>Data Visualization</span><span>Analytics</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a class="project-link" href="https://public.tableau.com/app/profile/sneha.sharma6605/viz/Netflix_17371872846430/Netflix" target="_blank" rel="noopener noreferrer">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="hair">
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section id="credentials">
+  <p class="eyebrow">Credentials</p>
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="certs">
+
+    <div class="cert">
+      <div>
+        <div class="cert-name">Microsoft Certified: Fabric Data Engineer Associate</div>
+        <div class="cert-issuer">Microsoft · DP-700</div>
+      </div>
+      <a class="cert-link" href="https://learn.microsoft.com/en-us/users/snehasharma-4747/credentials/32bb8264ed8ba1d1" target="_blank" rel="noopener noreferrer">View Credential</a>
+    </div>
+
+    <div class="cert">
+      <div>
+        <div class="cert-name">Microsoft Certified: Databricks Data Engineer Associate</div>
+        <div class="cert-issuer">Microsoft · DP-750</div>
+      </div>
+      <a class="cert-link" href="https://learn.microsoft.com/api/credentials/share/en-us/SnehaSharma-4747/34E4A73910828467" target="_blank" rel="noopener noreferrer">View Credential</a>
+    </div>
+
+    <div class="cert">
+      <div>
+        <div class="cert-name">Google Advanced Data Analytics</div>
+        <div class="cert-issuer">Google · Coursera</div>
+      </div>
+      <a class="cert-link" href="https://coursera.org/verify/professional-cert/31QA1NU3XZ32" target="_blank" rel="noopener noreferrer">View Credential</a>
+    </div>
+
+    <div class="cert">
+      <div>
+        <div class="cert-name">Machine Learning Specialization</div>
+        <div class="cert-issuer">deeplearning.ai · Coursera</div>
+      </div>
+      <a class="cert-link" href="https://coursera.org/share/79b138fee89aebc92e6146c4ac9e7419" target="_blank" rel="noopener noreferrer">View Credential</a>
+    </div>
+
+    <div class="cert">
+      <div>
+        <div class="cert-name">GitHub Foundations</div>
+        <div class="cert-issuer">GitHub</div>
+      </div>
+      <a class="cert-link" href="https://www.credly.com/go/yPxDamBT" target="_blank" rel="noopener noreferrer">View Credential</a>
+    </div>
+
+    <div class="cert">
+      <div>
+        <div class="cert-name">LeetCode Knight Badge</div>
+        <div class="cert-issuer">LeetCode</div>
+      </div>
+      <a class="cert-link" href="https://leetcode.com/thesnehasharma/" target="_blank" rel="noopener noreferrer">View Credential</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="hair">
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <p class="eyebrow">Professional Experience</p>
+  <h2 class="section-title">Work Experience</h2>
+
+  <div class="experience-list">
+
+    <div class="exp-item">
+      <div class="exp-dates">Aug 2026 — Present</div>
+      <div>
+        <h3>Cohere Labs Open Science Community</h3>
+        <span class="exp-role">Member</span>
+        <ul>
+          <li>Engage with a global community of machine learning researchers and engineers exploring open research collaboration and emerging AI technologies.</li>
+          <li>Participate in reading groups, guest speaker sessions, collaborative projects, and discussions spanning NLP, retrieval, ML agents, safety, and multimodal AI.</li>
+        </ul>
+      </div>
+      <a class="exp-link" href="https://lnkd.in/p/dT5d-GSe" target="_blank" rel="noopener noreferrer">View Experience</a>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-dates">July 2026 — Present</div>
+      <div>
+        <h3>FlyRank AI</h3>
+        <span class="exp-role">Machine Learning Intern</span>
+        <ul>
+          <li>Apply end-to-end machine learning workflows including data preprocessing, exploratory data analysis, feature engineering, model development, and performance evaluation.</li>
+          <li>Develop production-oriented machine learning projects and practical solutions that translate business problems into data-driven systems.</li>
+        </ul>
+      </div>
+      <a class="exp-link" href="https://www.linkedin.com/company/flyrank/home/">View Experience</a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact">
+  <div class="shell foot-row">
+
+    <div>
+      <div class="foot-brand">Sneha Sharma</div>
+      <div class="foot-clock" id="footClock">--:--:--</div>
+      <div class="foot-location">Jamshedpur, India</div>
+    </div>
+
+    <div class="foot-links">
+      <a href="mailto:devsnehasharma@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20v16H2V4zm10 8L4 6v12h16V6l-8 6zm0 2L4 8v10h16V8l-8 6z"/></svg>
+        devsnehasharma@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/devsnehasharma/" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.36 8.16h4.25V24H.36V8.16zM7.29 8.16h4.07v2.16h.06c.57-1.08 1.96-2.22 4.03-2.22 4.31 0 5.11 2.84 5.11 6.53V24h-4.24v-8.3c0-1.98-.04-4.53-2.76-4.53-2.77 0-3.19 2.16-3.19 4.39V24H6.12V8.16h1.17z"/></svg>
+        linkedin.com/in/devsnehasharma
+      </a>
+      <a href="https://github.com/TheSnehaSharma" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.64 5.6.64 11.88c0 5.02 3.25 9.27 7.76 10.77.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.97-3.15.69-3.82-1.52-3.82-1.52-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.73 2.65 1.23 3.3.94.1-.73.4-1.23.72-1.51-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.17-3.05-.12-.29-.51-1.44.11-3 0 0 .95-.31 3.12 1.16A10.8 10.8 0 0112 6.55c.97 0 1.95.13 2.86.39 2.18-1.47 3.12-1.16 3.12-1.16.62 1.56.23 2.71.11 3 .73.8 1.17 1.81 1.17 3.05 0 4.35-2.64 5.31-5.16 5.59.41.35.77 1.03.77 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.21.66.79.55 4.5-1.5 7.75-5.75 7.75-10.77C23.36 5.6 18.27.5 12 .5z"/></svg>
+        github.com/TheSnehaSharma
+      </a>
+    </div>
+
+  </div>
+
+  <div class="shell foot-copy">
+    © 2026 Sneha Sharma · Data & AI/ML Engineering Portfolio
+  </div>
+</footer>
+
+<script>
+  // live clock
+  function tickClock() {
+    const now = new Date();
+    const clock = document.getElementById("footClock");
+    if (clock) {
+      clock.textContent = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+    }
+  }
+  tickClock();
+  setInterval(tickClock, 1000);
+
+  // mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('is-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  const revealTargets = document.querySelectorAll('main > section, footer');
+  revealTargets.forEach(el => el.classList.add('reveal'));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealTargets.forEach(el => io.observe(el));
+  } else {
+    revealTargets.forEach(el => el.classList.add('is-visible'));
+  }
+</script>
+
+</body>
 </html>
-<!--<footer class="major">
-	<ul class="actions special">
-		<li><a href="generic.html" class="button">Learn More</a></li>
-	</ul>
-</footer>-->
